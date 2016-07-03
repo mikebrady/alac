@@ -16,7 +16,7 @@ dnl See the License for the specific language governing permissions and
 dnl limitations under the License.
 
 AC_PREREQ([2.68])
-AC_INIT([alac], [0.0.6], [mikebrady@eircom.net])
+AC_INIT([alac], [0.0.7], [mikebrady@eircom.net])
 AM_INIT_AUTOMAKE
 AC_CONFIG_SRCDIR([codec/dp_enc.c])
 AC_CONFIG_HEADERS([config.h])
