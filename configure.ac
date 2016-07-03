@@ -44,7 +44,7 @@ dnl Checks for header files.
 AC_CHECK_HEADERS([stdint.h stdlib.h string.h])
 
 dnl Checks for typedefs, structures, and compiler characteristics.
-AC_CHECK_HEADER_STDBOOL
+dnl AC_CHECK_HEADER_STDBOOL
 AC_C_INLINE
 AC_TYPE_INT16_T
 AC_TYPE_INT32_T
