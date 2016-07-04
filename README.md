@@ -1,9 +1,9 @@
 ALAC
 ====
 
-This repository is a clone of the Apple Lossless Audio Codec at http://alac.macosforge.org with added files to enable it to be built using GNU `autotools`. Use it to build and install the Apple Lossless Audio Codec (ALAC) library `libalac`.
+This repository is a clone of the Apple Lossless Audio Codec (ALAC) repository at http://alac.macosforge.org with added files to enable it to be built using GNU `autotools`. Use it to build and install the ALAC library `libalac`.
 
-The added files are based on work done by Tiancheng "Timothy" Gu – @TimothyGu – in his repository https://github.com/TimothyGu/alac/ with some changes. Many thanks to him for his work. This respository is bare-bones – it does not cater for Visual Studio nor does it deal with Debian packaging. Similarly, it does not install `man` pages.
+The added files are based on work done by [Tiancheng "Timothy" Gu](https://github.com/TimothyGu)  in his repository https://github.com/TimothyGu/alac/ with some changes. Many thanks to him for his work. This respository is bare-bones – it does not cater for Visual Studio nor does it deal with Debian packaging. Similarly, it does not install `man` pages.
 
 ###Download, build, install
 
