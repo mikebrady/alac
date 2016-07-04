@@ -28,4 +28,11 @@ $ sudo make install
 ```
 $ sudo ldconfig -v
 ```
-That's it. 
+That's it – the library can now be linked to via `pkg-config`: the module name is `alac`, thus:
+```
+PKG_CHECK_MODULES([ALAC], [alac], [LIBS="${ALAC_LIBS} ${LIBS}"])
+```
+should work. If you are using `AC_CHECK_LIB`, something like this will work:
+```
+AC_CHECK_LIB([alac], [BitBufferInit], , AC_MSG_ERROR(Apple ALAC Decoder support requires the alac library!))
+```
