@@ -20,6 +20,11 @@ $ autoreconf -fi
 $ ./configure
 $ make
 ```
+The `autoconfigure` command may take a long time. You may get a warning which you can ignore:
+```
+aclocal: warning: couldn't open directory 'm4': No such file or directory
+```
+
 * Install the library:
 ```
 $ sudo make install
