@@ -32,7 +32,7 @@ aclocal: warning: couldn't open directory 'm4': No such file or directory
 ```
 Make it Available
 ---
-* Finally, to make the library visible during compilation, you need to tell `ld` about it. Be careful here – if you are on FreeBSD, the Linux commands will mess up your system. On Linux, use the following command:
+To make the library visible during compilation, you need to tell `ld` about it. Be careful here – if you are on FreeBSD, the Linux commands will mess up your system. On Linux, use the following command:
 ```
 # ldconfig -v
 ```
