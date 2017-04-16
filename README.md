@@ -27,11 +27,16 @@ aclocal: warning: couldn't open directory 'm4': No such file or directory
 
 * Install the library:
 ```
-$ sudo make install
+# make install
 ```
-* Finally, to make the library visible during compilation, you need to tell `ld` to catalogue it:
+* Finally, to make the library visible during compilation, you need to tell `ld` about it. Be careful here – if you are on FreeBSD, the Linux commands will mess up your system. On Linux, use the following command:
 ```
-$ sudo ldconfig -v
+# ldconfig -v
+```
+On FreeBSD you must add the location of the `soxr.pc` file to the `PKG_CONFIG_PATH`, if it exists, and define it otherwise. Here is what you do if it doesn't already exist:
+```
+$ PKG_CONFIG_PATH="/usr/local/lib/pkgconfig"
+$ export PKG_CONFIG_PATH
 ```
 That's it – the library can now be linked to via `pkg-config`: the module name is `alac`, thus:
 ```
