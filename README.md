@@ -34,7 +34,7 @@ Make it Available
 ---
 To make the library visible during compilation, you need to tell `ld` about it. Be careful here – if you are on FreeBSD, the Linux commands will mess up your system. On Linux, use the following command:
 ```
-# ldconfig -v
+# ldconfig
 ```
 On FreeBSD you must add the location of the `alac.pc` file to the `PKG_CONFIG_PATH`, if it exists, and define it otherwise. Here is what you do if it doesn't already exist:
 ```
