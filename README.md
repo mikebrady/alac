@@ -32,20 +32,26 @@ aclocal: warning: couldn't open directory 'm4': No such file or directory
 ```
 Make it Available
 ---
-To make the library visible during compilation, you need to tell `ld` about it. Be careful here – if you are on FreeBSD, the Linux commands will mess up your system. On Linux, use the following command:
+To make the library visible during compilation, you need to tell `ld` about it. Be careful here – if you are on FreeBSD, the Linux command will mess up your system. On Linux, use the following command:
 ```
 # ldconfig
 ```
+
+* Using the library
+
+The library can be found and linked to via `pkg-config` – the module name is `alac`.
+
+Thus:
+```
+PKG_CHECK_MODULES([ALAC], [alac], [LIBS="${ALAC_LIBS} ${LIBS}"])
+```
+should work in a `configure.ac` file. If you are using `AC_CHECK_LIB`, something like this will work:
+```
+AC_CHECK_LIB([alac], [BitBufferInit], , AC_MSG_ERROR(Apple ALAC Decoder support requires the alac library!))
+```
+
 On FreeBSD you must add the location of the `alac.pc` file to the `PKG_CONFIG_PATH`, if it exists, and define it otherwise. Here is what you do if it doesn't already exist:
 ```
 $ PKG_CONFIG_PATH="/usr/local/lib/pkgconfig"
 $ export PKG_CONFIG_PATH
-```
-That's it – the library can now be linked to via `pkg-config`: the module name is `alac`, thus:
-```
-PKG_CHECK_MODULES([ALAC], [alac], [LIBS="${ALAC_LIBS} ${LIBS}"])
-```
-should work. If you are using `AC_CHECK_LIB`, something like this will work:
-```
-AC_CHECK_LIB([alac], [BitBufferInit], , AC_MSG_ERROR(Apple ALAC Decoder support requires the alac library!))
 ```
