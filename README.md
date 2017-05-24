@@ -37,7 +37,8 @@ To make the library visible during compilation, you need to tell `ld` about it. 
 # ldconfig
 ```
 
-* Using the library
+Using the library
+---
 
 The library can be found and linked to via `pkg-config` – the module name is `alac`.
 
