@@ -5,6 +5,13 @@ This repository is a clone of the Apple Lossless Audio Codec (ALAC) repository a
 
 The added files are based on work done by [Tiancheng "Timothy" Gu](https://github.com/TimothyGu)  in his repository https://github.com/TimothyGu/alac with some changes. Many thanks to him for his work. This respository is bare-bones – for Visual Studio or Debian packaging support or for `man` pages, please go to Timothy's repository.
 
+Install Build Tools
+---
+Building `libalac` requires a number of tools, such a the compiler and linker, `git` and more. Ensure they are already in place by running the following command. If the tools are already in place, it'll do no harm. You'll need to be superuser, so you might need to prefix it  with `sudo`:
+```
+# apt get update
+# apt-get install build-essential git autoconf automake libtool
+```
 Download, Build, Install
 ---
 
