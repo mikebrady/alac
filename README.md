@@ -10,9 +10,9 @@ The added files are based on work done by [Tiancheng "Timothy" Gu](https://githu
 Install Build Tools
 ---
 Building `libalac` requires a number of tools, such a the compiler and linker, `git` and more. Ensure they are already in place by running the following command. If the tools are already in place, it'll do no harm. 
-```
-# apt get update
-# apt-get install build-essential git autoconf automake libtool
+```sh
+sudo apt get update
+sudo apt-get install build-essential git autoconf automake libtool
 ```
 Download, Build, Install
 ---
@@ -50,8 +50,8 @@ sudo dpkg -i alac_*_armhf.deb
 Make it Available
 ---
 To make the library visible during compilation, you need to tell `ld` about it. Be careful here – if you are on FreeBSD, the Linux command will mess up your system. On Linux, use the following command:
-```
-# ldconfig
+```sh
+sudo ldconfig
 ```
 
 Using the library
@@ -69,7 +69,7 @@ AC_CHECK_LIB([alac], [BitBufferInit], , AC_MSG_ERROR(Apple ALAC Decoder support 
 ```
 
 On FreeBSD you must add the location of the `alac.pc` file to the `PKG_CONFIG_PATH`, if it exists, and define it otherwise. Here is what you do if it doesn't already exist:
-```
-$ PKG_CONFIG_PATH="/usr/local/lib/pkgconfig"
-$ export PKG_CONFIG_PATH
+```sh
+PKG_CONFIG_PATH="/usr/local/lib/pkgconfig"
+export PKG_CONFIG_PATH
 ```
