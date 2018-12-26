@@ -20,15 +20,15 @@ Download, Build, Install
 To download, build and install `libalac` do the following:
 
 * Clone the repository and `cd` into the folder:
-```
-$ git clone https://github.com/mikebrady/alac.git
-$ cd alac
+```sh
+git clone https://github.com/mikebrady/alac.git
+cd alac
 ```
 * Configure the build and make the library:
-```
-$ autoreconf -fi
-$ ./configure
-$ make
+```sh
+autoreconf -fi
+./configure
+make
 ```
 The `autoconfigure` command may take a long time. You may get a warning which you can ignore:
 ```
@@ -36,9 +36,17 @@ aclocal: warning: couldn't open directory 'm4': No such file or directory
 ```
 
 * Install the library:
+You should not use `sudo make install` ([why?](https://help.ubuntu.com/community/CheckInstall)).
+Follow the checkinstall installation guide:
+
+```sh
+sudo apt install -y checkinstall
+echo "Apple Lossless Codec and Utility" > description-pak
+sudo checkinstall -d 2 --pkgrelease=0 --maintainer=mikebrady --requires= --pkgversion=0.0.7 --install=no
+sudo dpkg -i alac_*_armhf.deb
 ```
-# make install
-```
+
+
 Make it Available
 ---
 To make the library visible during compilation, you need to tell `ld` about it. Be careful here – if you are on FreeBSD, the Linux command will mess up your system. On Linux, use the following command:
