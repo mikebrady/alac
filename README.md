@@ -42,7 +42,7 @@ Follow the checkinstall installation guide:
 ```sh
 sudo apt install checkinstall
 echo "Apple Lossless Codec and Utility" > description-pak
-sudo checkinstall --exclude=/etc/passwd -d 2 --pkgrelease=0 --maintainer=mikebrady --requires= --pkgversion=0.0.7 --install=no
+sudo checkinstall --exclude="/etc/passwd,/etc/group,/etc/shadow,/etc/gshadow" -d 2 --pkgrelease=0 --maintainer=mikebrady --requires= --pkgversion=0.0.7 --install=no
 sudo dpkg -i alac_*_armhf.deb
 ```
 
