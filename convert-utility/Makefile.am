@@ -14,7 +14,7 @@
 
 bin_PROGRAMS = alacconvert$(EXEEXT)
 
-alacconvert_CPPFLAGS = -Wno-multichar
+alacconvert_CPPFLAGS = -Wno-multichar -I../codec
 alacconvert_LDADD = ../codec/libalac.la
 alacconvert_SOURCES = \
     main.cpp \
