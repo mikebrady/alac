@@ -37,7 +37,7 @@ aclocal: warning: couldn't open directory 'm4': No such file or directory
 
 * Install the library:
 ```
-# make install
+# sudo make install
 ```
 Make it Available
 ---
