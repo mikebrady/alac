@@ -11,7 +11,7 @@ Install Build Tools
 ---
 Building `libalac` requires a number of tools, such a the compiler and linker, `git` and more. Ensure they are already in place by running the following command. If the tools are already in place, it'll do no harm. 
 ```
-# apt get update
+# apt-get update
 # apt-get install build-essential git autoconf automake libtool
 ```
 Download, Build, Install
