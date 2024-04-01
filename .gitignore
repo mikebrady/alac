@@ -1,0 +1,27 @@
+/INSTALL
+ltmain.sh
+m4
+*.o
+/*~
+*.xml~
+/config.mk
+/config.h
+Makefile
+Makefile.in
+aclocal.m4
+autom4te.cache
+compile
+/config.*
+configure
+depcomp
+install-sh
+missing
+stamp-h1
+.dirstamp
+.deps
+man/Makefile
+man/Makefile.in
+
+# separate build directory
+build
+
