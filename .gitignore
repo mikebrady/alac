@@ -21,7 +21,7 @@ stamp-h1
 .deps
 man/Makefile
 man/Makefile.in
-
+libtool
 # separate build directory
 build
-
+codec
